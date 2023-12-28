@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import DeleteModal from '../modals/DeleteModal';
 import EditTaskModal from '../modals/EditTaskModal';
 
-function Menu({setMenu, task, deleteTask }) {
+function Menu({setMenu, task, deleteTask, taskIndex, prevColIndex = 0 }) {
     const [deleteModal, setDeleteModal] = useState(false)
     const [editModal, setEditModal] = useState(false)
   return (
@@ -36,7 +36,9 @@ function Menu({setMenu, task, deleteTask }) {
         {/* deletemodal */}
         {deleteModal && <DeleteModal deleteTask ={deleteTask} setDeleteModal={setDeleteModal}  boardName={task.title} type={'Task and Subtask'} />}
         {/* editModal */}
-        {editModal && <EditTaskModal  task={task} deleteTask ={deleteTask} setEditModal={setEditModal}  boardName={task.title} type={'Task and Subtask'} />}
+        {editModal && <EditTaskModal type={'edit'}  task={task} deleteTask ={deleteTask} setEditModal={setEditModal}
+        taskIndex = {taskIndex} prevColIndex={prevColIndex  }
+        />}
 
     </div>
   )

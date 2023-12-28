@@ -14,7 +14,7 @@ function BoardDropdown({setDropdownOpen, setBoardModal}) {
     const [boardName, setBoardName] = useState('')
   return (
     <div 
-    className=' py-10 px-10 absolute top-16 right-0 left-0 bottom-[-100vh] bg-[#00000080]'
+    className=' z-50 py-10 px-10 absolute top-16 right-0 left-0 bottom-[-100vh] bg-[#00000080]'
     onClick={
         (e) => {
             if(e.target !==e.currentTarget){
@@ -43,6 +43,8 @@ function BoardDropdown({setDropdownOpen, setBoardModal}) {
                         key={index} 
                         onClick={() => {
                             dispatch(taskSlice.actions.setBoardActive({ index }));
+                            // setDropdownOpen(false)
+
                           }}>
                         {/* <div className='flex justify-between'>  */}
                             {board.name}
@@ -55,7 +57,7 @@ function BoardDropdown({setDropdownOpen, setBoardModal}) {
                             setEditBoardModal(true)
                         }}/>}
                    
-                    <img src={trash} className='h-5 w-8 ' onClick={()=>{
+                    <img src={trash} className='h-5 w-8 z-50' onClick={()=>{
                         setDeleteModal(true)
                         setBoardName(board.name)
                         // setDropdownOpen(false)

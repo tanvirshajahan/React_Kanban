@@ -18,9 +18,16 @@ function Task({taskIndex, colIndex}) {
             completed++
         }
     });
+
+    const HandleDrag = (e)=>{
+        e.dataTransfer.setData("text",JSON.stringify({taskIndex,prevColIndex: colIndex}))
+    }
+   
   return (
     <div>
         <div
+        onDragStart={HandleDrag}
+        draggable
         className='w-[280] first:my-5 rounded bg-white shadow-white py-4 px-5 hover:text-[#c75f5f] cursor-pointer'
         onClick={()=>{
             setTaskModal(true)
@@ -36,7 +43,7 @@ function Task({taskIndex, colIndex}) {
                 {completed} out of {subtasks.length}
 
             </p>
-        </div>
+        </div>  
         {taskModal && <TaskModal
         colIndex = {colIndex}
         taskIndex = {taskIndex}

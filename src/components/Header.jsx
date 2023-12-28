@@ -25,13 +25,12 @@ function Header({boardModal,setBoardModal}) {
             <div className='flex items-center ml-3'>
                 <h3 className=' max-w[200px] md:text-2xl text-xl  text-white items-center'>{board.name}</h3>
                 <img src={dropdownOpen? iconDown:iconUp} alt='dropdown'
-                    className='w-3 h-2 m-2'
+                    className='w-5 h-4  mx-3'
                     onClick={() => setDropdownOpen(!dropdownOpen)} />
             </div>
 
             {/* right */}
-            <div className=' flex space-x-4  '>
-                <button className='button'>Add Item</button>
+            <div className=' flex space-x-3  '>
                 <button className='button '
                     onClick={() =>{
                         setDropdownOpen(true)

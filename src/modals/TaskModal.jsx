@@ -58,8 +58,11 @@ function TaskModal({colIndex, taskIndex, setTaskModal}) {
                         setMenu(!menu)
                     }}
                     src={menuIcon} className=' w-5 h-5 cursor-pointer'/>
-
-                    {menu && <Menu setMenu= {setMenu} deleteTask ={deleteTask} task={task} />}
+                    
+                    {/* open menu to edit and delete */}
+                    {menu && <Menu setMenu= {setMenu} deleteTask ={deleteTask} 
+                    task={task} taskIndex ={taskIndex} prevColIndex ={colIndex}
+                     />}
                 </div>
 
                 <div
@@ -92,6 +95,8 @@ function TaskModal({colIndex, taskIndex, setTaskModal}) {
                 </div>
 
             </div>
+
+
             
 
         </div>
