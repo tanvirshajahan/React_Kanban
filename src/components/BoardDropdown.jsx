@@ -68,7 +68,7 @@ function BoardDropdown({setDropdownOpen, setBoardModal}) {
             </div>
             
             {/* deletemodal */}
-            {deleteModal && <DeleteModal boardName ={boardName} setDeleteModal={setDeleteModal} />}
+            {deleteModal && <DeleteModal boardName ={boardName} setDeleteModal={setDeleteModal} type={'Board'} />}
             {/* edit board */}
             {editBoardModal && <BoardModal type={'edit'} setBoardModal = {setEditBoardModal} prevName={boardName} />}
 
