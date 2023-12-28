@@ -11,7 +11,6 @@ function EditTaskModal({task, setEditModal, type, taskIndex, prevColIndex = 0}) 
     const [description, setDescription] = useState('')
     const [subtasks, setSubtasks] = useState([
         {title:'', isCompleted: false, id: uuidv4()},
-        {title:'', isCompleted: false, id: uuidv4()},
     ])
     const [first, setFirst] = useState(true)
 
@@ -154,7 +153,8 @@ function EditTaskModal({task, setEditModal, type, taskIndex, prevColIndex = 0}) 
                         key={i}
                         >
                             <input
-                                className='text-xs w-full'
+                                className='text-xs w-full px-3 py-1
+                                '
                                 value={subtask.title}
                                 onChange={(e) => {
                                     onChange(subtask.id, e.target.value);

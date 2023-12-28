@@ -48,7 +48,7 @@ function Content({boardModal, setBoardModal}) {
             text-2xl hover:text-[#635FC7]  cursor-pointer scrollbar-hide mx-5 min-w-[280px] 
             text-[#828FA3] rounded-lg "
           >
-            Add New Column
+            Add New Section
           </div>
         </>)
         :
