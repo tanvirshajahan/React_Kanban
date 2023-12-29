@@ -30,7 +30,7 @@ Kanban is a visual system that uses boards and tiles to manage work. It helps te
 ## Installation
 
 # npm
-npm install
+npm i
 
 # npm
 npm run dev
@@ -40,4 +40,4 @@ npm run dev
 
 - React Js Tailwind css
 - Redux Toolkit
-- 
+
