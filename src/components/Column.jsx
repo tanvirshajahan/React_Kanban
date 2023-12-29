@@ -46,7 +46,7 @@ function Column({colIndex}) {
     <div
     onDrop={HandleDrop}
     onDragOver={handleDragOver}
-    className='scrollbar-hide mx-5 pt=[80px] min-w-[270px]' >
+    className='scrollbar-hide mx-5 pt=[80px] min-w-[270px] border-2 px-2 rounded-xl bg-slate-500 border-slate-500' >
         <div className=" mt-2 font-semibold flex  items-center  gap-2 tracking-widest md:tracking-[.2em] text-[#828fa3]">
             <p className={`rounded-full w-4 h-4 ${color} `} />
             {col.name} ({col.tasks.length})

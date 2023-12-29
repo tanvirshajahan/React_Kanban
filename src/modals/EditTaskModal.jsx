@@ -25,6 +25,18 @@ function EditTaskModal({task, setEditModal, type, taskIndex, prevColIndex = 0}) 
     const [isValid, setIsValid] = useState(true)
     const [newColIndex, setNewColIndex] = useState(prevColIndex);
 
+    if (type === "edit" && first) {
+        setSubtasks(
+          tasks.subtasks.map((subtasks) => {
+            return { ...subtasks, id: uuidv4() };
+          })
+        );
+        setTitle(boards.name);
+        setDescription(boards.description);
+        setFirst(false);
+    }
+
+      
     const validate =()=>{
         setIsValid(false)
         if(!title.trim()){
@@ -38,15 +50,13 @@ function EditTaskModal({task, setEditModal, type, taskIndex, prevColIndex = 0}) 
             return false
         }
 
-        if (type === "edit" && first) {
-            setNewColumns(
-              boards.columns.map((col) => {
-                return { ...col, id: uuidv4() };
-              })
-            );
-            setName(boards.name);
-            setIsFirstLoad(false);
-          }
+        for (let i = 0; i < subtasks.length; i++) {
+            if (!subtasks[i].title.trim()) {
+                alert('list cannot have empty item')
+              return false;
+            }
+        }
+        
 
         setIsValid(true)
         return true

@@ -60,8 +60,14 @@ function BoardModal({setBoardModal, type, prevName}) {
             );
             setName(boards.name);
             setIsFirstLoad(false);
-          }
+        }
 
+        for (let i = 0; i < newColumns.length; i++) {
+            if (!newColumns[i].name.trim()) {
+                alert('list cannot have empty item')
+              return false;
+            }
+        }
         setIsValid(true)
         return true
     }
@@ -105,7 +111,7 @@ function BoardModal({setBoardModal, type, prevName}) {
             <div>
                 <h1>Sections</h1>
                 {newColumns.map((column, i) =>(
-                    <div
+                    <div key={i}
                     className='flex px-4 py-1 justify-between items-center '
                     >
                         <input 

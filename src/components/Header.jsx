@@ -19,8 +19,8 @@ function Header({boardModal,setBoardModal}) {
 
             {/* left */}
             <div className='flex  items-center space-x-'>
-                <img src={logo} alt='logo' className='h-8 w-16 '/>
-                <h2 className=' hidden md:inline-block text-white font-serif '>KANBAN</h2>
+                <img src={logo} alt='logo' className='h-8 w-16 mr-2 rounded-xl '/>
+                <h2 className=' hidden md:inline-block text-white text-xl '>KANBAN</h2>
             </div>
             <div className='flex items-center ml-3'>
                 <h3 className=' max-w[200px] md:text-2xl text-xl  text-white items-center'>{board.name}</h3>
