@@ -11,6 +11,7 @@ Brief description or overview of This Project.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
+- [Screenshots](#Screenshots)
 
 ## Introduction
 
@@ -41,3 +42,6 @@ npm run dev
 - React Js Tailwind css
 - Redux Toolkit
 
+## Screenshots
+
+<img width="1024" alt="Screenshot 2023-12-29 at 3 32 22 PM" src="https://github.com/tanvirshajahan/React_Kanban/assets/21345879/62b14558-5077-463e-97cc-8c53c161e1d9">
